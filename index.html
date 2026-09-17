@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta Melhor - Inclusão Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">
+      <span class="icone">📱</span>
+      <div>
+        <h1>Conecta Melhor</h1>
+        <p>Cartilha de Inclusão Digital</p>
+      </div>
+    </div>
+    <button class="btn-acessibilidade" id="btnFonte" aria-label="Aumentar tamanho do texto">
+      🔎 Aumentar texto
+    </button>
+  </header>
+
+  <main>
+    <section class="tela ativa" id="inicio">
+      <div class="hero">
+        <span class="emoji-grande">👋</span>
+        <h2>Olá! Vamos aprender juntos?</h2>
+        <p>
+          Aqui você encontra dicas simples para usar a internet,
+          o WhatsApp e aplicativos de banco com mais segurança.
+        </p>
+      </div>
+
+      <div class="cards">
+        <button class="card" data-tela="fake-news">
+          <span>📰</span>
+          <strong>Fake News</strong>
+          <small>Aprenda a identificar notícias falsas.</small>
+        </button>
+
+        <button class="card" data-tela="whatsapp">
+          <span>💬</span>
+          <strong>Golpes no WhatsApp</strong>
+          <small>Veja como evitar mensagens e links perigosos.</small>
+        </button>
+
+        <button class="card" data-tela="banco">
+          <span>🏦</span>
+          <strong>Banco com segurança</strong>
+          <small>Use aplicativos bancários com mais tranquilidade.</small>
+        </button>
+      </div>
+
+      <div class="dica">
+        <strong>💡 Dica importante</strong>
+        <p>Se alguma mensagem causar dúvida, pare e peça ajuda antes de clicar.</p>
+      </div>
+    </section>
+
+    <section class="tela" id="fake-news">
+      <button class="voltar" data-tela="inicio">← Voltar</button>
+      <div class="titulo-secao">
+        <span>📰</span>
+        <div>
+          <h2>Como identificar Fake News?</h2>
+          <p>Antes de acreditar ou compartilhar, faça estas verificações.</p>
+        </div>
+      </div>
+
+      <div class="passos">
+        <article class="passo">
+          <span>1</span>
+          <div>
+            <h3>Veja quem publicou</h3>
+            <p>Confira o nome do site, jornal ou pessoa que publicou a informação.</p>
+          </div>
+        </article>
+        <article class="passo">
+          <span>2</span>
+          <div>
+            <h3>Confira a data</h3>
+            <p>Uma notícia antiga pode voltar a circular como se fosse atual.</p>
+          </div>
+        </article>
+        <article class="passo">
+          <span>3</span>
+          <div>
+            <h3>Desconfie de exageros</h3>
+            <p>Frases como “URGENTE!”, “compartilhe agora!” ou “ninguém quer que você saiba” merecem atenção.</p>
+          </div>
+        </article>
+        <article class="passo">
+          <span>4</span>
+          <div>
+            <h3>Pesquise em outros lugares</h3>
+            <p>Procure a mesma informação em fontes confiáveis antes de compartilhar.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="alerta">
+        <strong>⚠️ Pare e confira!</strong>
+        <p>Se você não tiver certeza de que uma informação é verdadeira, não compartilhe.</p>
+      </div>
+    </section>
+
+    <section class="tela" id="whatsapp">
+      <button class="voltar" data-tela="inicio">← Voltar</button>
+      <div class="titulo-secao">
+        <span>💬</span>
+        <div>
+          <h2>Golpes no WhatsApp</h2>
+          <p>Alguns cuidados simples podem evitar grandes problemas.</p>
+        </div>
+      </div>
+
+      <div class="lista-seguranca">
+        <div class="item-seguranca">
+          <span>🔗</span>
+          <div>
+            <h3>Não clique em links suspeitos</h3>
+            <p>Mesmo que a mensagem pareça vir de alguém conhecido, confirme antes.</p>
+          </div>
+        </div>
+        <div class="item-seguranca">
+          <span>🔐</span>
+          <div>
+            <h3>Nunca informe códigos</h3>
+            <p>Não compartilhe códigos recebidos por SMS ou WhatsApp.</p>
+          </div>
+        </div>
+        <div class="item-seguranca">
+          <span>👤</span>
+          <div>
+            <h3>Confirme quem está falando</h3>
+            <p>Se alguém disser que trocou de número e pedir dinheiro, ligue para a pessoa por outro meio.</p>
+          </div>
+        </div>
+        <div class="item-seguranca">
+          <span>🚫</span>
+          <div>
+            <h3>Desconfie de urgência</h3>
+            <p>Golpistas costumam criar pressão para você tomar uma decisão sem pensar.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="botao-principal" id="simularGolpe">🎯 Fazer um teste</button>
+
+      <div class="quiz oculto" id="quizGolpe">
+        <h3>Você recebeu esta mensagem:</h3>
+        <div class="mensagem-falsa">
+          <p><strong>“Oi! Troquei de número. Estou com um problema e preciso que você faça um PIX urgente. Depois eu devolvo.”</strong></p>
+        </div>
+        <p>O que você faria?</p>
+        <div class="opcoes">
+          <button data-correta="false">Faria o PIX imediatamente.</button>
+          <button data-correta="true">Confirmaria a identidade da pessoa antes.</button>
+        </div>
+        <p class="resultado" id="resultadoQuiz"></p>
+      </div>
+    </section>
+
+    <section class="tela" id="banco">
+      <button class="voltar" data-tela="inicio">← Voltar</button>
+      <div class="titulo-secao">
+        <span>🏦</span>
+        <div>
+          <h2>Use o banco com segurança</h2>
+          <p>Confira estas dicas antes de fazer uma operação.</p>
+        </div>
+      </div>
+
+      <div class="checklist">
+        <label><input type="checkbox"> Estou usando meu próprio celular.</label>
+        <label><input type="checkbox"> Estou conectado a uma rede segura.</label>
+        <label><input type="checkbox"> Conferi o nome e os dados do destinatário.</label>
+        <label><input type="checkbox"> Não contei minha senha para ninguém.</label>
+        <label><input type="checkbox"> Não estou fazendo uma transferência por pressão de outra pessoa.</label>
+      </div>
+
+      <div class="alerta">
+        <strong>🔒 Lembre-se</strong>
+        <p>Banco nunca deve pedir sua senha, código de segurança ou acesso remoto ao seu celular por telefone ou mensagem.</p>
+      </div>
+
+      <button class="botao-principal" id="verificarChecklist">Verificar minha segurança</button>
+      <p class="resultado" id="resultadoBanco"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Conecta Melhor • Aprender tecnologia pode ser simples 💙</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
